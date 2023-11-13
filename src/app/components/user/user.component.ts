@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, UpperCasePipe } from '@angular/common';
 import { OperatingSystem } from '../../interfaces/operating-system';
 import { OperatingSystemsService } from '../../core/operating-systems.service';
 
