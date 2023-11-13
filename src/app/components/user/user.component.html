@@ -1,0 +1,17 @@
+<section>
+    <p>Hello {{ username }}. Your occupation is {{ occupation }} </p>
+    @if (doesUserExist) {
+        <p>Congratulations! You do exist.</p>
+    } @else {
+        <p>We're sorry, but we have doudbs your existense</p>
+    }
+
+    <h2>He're your operating systems: </h2>
+    <ul>
+        @for(os of operatingSystems; track os.id) {
+            <li (click)="onClick(os.name)">{{ os.name }}</li>
+        }
+    </ul>
+    <div class="editable-div" [contentEditable]="isEditable"></div>
+    <button (click)="emitToParent()">Message to parent!</button>
+</section>
