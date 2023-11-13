@@ -1,20 +1,14 @@
+<nav>
+    <ul>
+        <li><a routerLink="/blog-post">Blog</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+</nav>
 <section>
     <h1>User Information</h1>
     <user-component 
         (greet)="receiveEmision($event)" 
         [occupation]="userOcuppation"/>
 </section>
-
 <p>{{ childsMessage }}</p>
-
-<section>
-    <h1>Comments</h1>
-    @defer (on viewport) {
-        <comments-component/>
-    } @placeholder {
-        <p>Future comments to be loaded!</p>
-    } @loading (minimum 2s) {
-        <p>Loading comments</p>
-    }
-</section>
 <router-outlet></router-outlet>
